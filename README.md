@@ -1,6 +1,6 @@
 # ficticius-clean
 
-#### Rodar a aplicação usando com MYSql usando docker
+#### Rodar a aplicação com MYSql usando docker
 
 * Executar `docker-compose up` na raiz do projeto e um container com a aplicação e outro o MYSql já configurado será levantando; 
 * A aplicação está disponível em `http://localhost:8080`
