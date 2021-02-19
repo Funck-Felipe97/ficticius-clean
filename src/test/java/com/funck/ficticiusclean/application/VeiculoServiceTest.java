@@ -2,6 +2,7 @@ package com.funck.ficticiusclean.application;
 
 import com.funck.ficticiusclean.application.request.NovoVeiculoRequest;
 import com.funck.ficticiusclean.domain.entities.Veiculo;
+import com.funck.ficticiusclean.domain.exceptions.NotFoundException;
 import com.funck.ficticiusclean.domain.repositories.VeiculoRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -12,7 +13,6 @@ import org.mockito.MockitoAnnotations;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
@@ -86,10 +86,10 @@ public class VeiculoServiceTest {
         });
     }
 
-    @DisplayName("Deve lançar NoSuchElementException quando o veículo não for encontrado")
+    @DisplayName("Deve lançar NotFoundException quando o veículo não for encontrado")
     @Test
     void testBuscar2() {
-        assertThrows(NoSuchElementException.class, () -> veiculoService.buscar(1L));
+        assertThrows(NotFoundException.class, () -> veiculoService.buscar(1L));
     }
 
     private NovoVeiculoRequest novoVeiculoRequest() {

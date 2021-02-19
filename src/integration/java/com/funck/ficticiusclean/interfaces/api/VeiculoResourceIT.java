@@ -57,9 +57,17 @@ public class VeiculoResourceIT {
                 .andExpect(jsonPath("$.consumoMedioCidade").value("10.0"))
                 .andExpect(jsonPath("$.consumoMedioRodovia").value("12.0"))
                 .andExpect(jsonPath("$.marca").value("Chevrolet"))
-                .andExpect(jsonPath("$.modelo").value("Hatch"))
-                .andExpect(jsonPath("$.nome").value("Celta"))
+                .andExpect(jsonPath("$.modelo").value("Celta"))
+                .andExpect(jsonPath("$.nome").value("Carro 1"))
                 .andExpect(jsonPath("$.dataFabricacao").value("2020-11-20"));
+    }
+
+    @DisplayName("Deve retornar 404 quando um veículo não for encontrado")
+    @Test
+    void testBuscar2() throws Exception {
+        mockMvc.perform(get("/api/v1/veiculos/101010")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNotFound());
     }
 
     private NovoVeiculoRequest novoVeiculoRequest() {

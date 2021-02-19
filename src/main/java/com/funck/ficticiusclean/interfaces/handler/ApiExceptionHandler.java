@@ -18,6 +18,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Está classe é responsável por tratar o retorno de uma requisição quando ocorrer algum erro.
+ * Elá retornar uma Lista de objetos ApiExceptionHandler.Error com os error ocorrídos para o usuário da api
+ *
+ */
 @ControllerAdvice
 public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 
