@@ -1,0 +1,3 @@
+insert into veiculo (id, nome, marca, modelo, data_fabricacao, consumo_medio_cidade, consumo_medio_rodovia) values (1, 'Celta', 'Chevrolet', 'Hatch', '2020-11-20', 10.00, 12.00);
+insert into veiculo (id, nome, marca, modelo, data_fabricacao, consumo_medio_cidade, consumo_medio_rodovia) values (2, 'Fusca', 'Chevrolet', 'Hatch', '2020-11-20', 1.00, 12.00);
+insert into veiculo (id, nome, marca, modelo, data_fabricacao, consumo_medio_cidade, consumo_medio_rodovia) values (3, 'Uno', 'Chevrolet', 'Hatch', '2020-11-20', 5.00, 12.00);
