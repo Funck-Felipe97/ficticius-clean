@@ -7,7 +7,7 @@
 
 #### Rodar a aplicação usando banco em memória (H2)
 * Necessário ter uma versão do java 11+;
-* Você rodar a aplicação com a sua IDE de preferência;
+* Você pode rodar a aplicação com a sua IDE de preferência;
 * Executar `java -jar ficticius-clean.jar` na reaiz do projeto;
 * A aplicação está disponível em `http://localhost:8080`
 
